@@ -199,12 +199,12 @@ class MaskDetect(object):
 					
 					server =smtplib.SMTP('smtp.gmail.com', 587) #SMTP = Simple Mail Transfer Protocol & 587 is port
 					server.starttls() # To secure TRusted server
-					server.login('facemask.uctc@gmail.com', 'facemask2021')
+					server.login('Your Mail ID', 'Your Mail Pass')
 					email = EmailMessage()
 					email['From'] = 'facemask.uctc@gmail.com'
-					email['To'] ='afsan.uct@gmail.com,afsan.self@gmail.com'
+					email['To'] ='test.uct@gmail.com,test2.self@gmail.com'
 					email['Subject'] =  'Face Mask Detection' 
-					email.set_content('A person has been detected with out mask in the UCTC Computer Lab Area. Please Alert the Authorotoes............!\n\n\n'+data)
+					email.set_content('A person has been detected with out mask............!\n\n\n'+data)
 					server.send_message(email)
 					
 					without_mask_countdown=0
